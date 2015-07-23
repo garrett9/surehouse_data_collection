@@ -16,17 +16,17 @@ public class Database {
 	 * The username to use when connecting to the database,
 	 */
 	private String USER;
-	
+
 	/**
 	 * The password to use when connecting to the database.
 	 */
 	private String PASS;
-	
+
 	/**
 	 * The Connection instance that handles the database connection.
 	 */
 	private Connection conn;
-	
+
 	/**
 	 * A statement used for performing queries, and getting results.
 	 */
@@ -100,7 +100,7 @@ public class Database {
 			while (rs.next ()){
 				int idVal = rs.getInt ("id");
 				String nameVal = rs.getString ("name");
-				long ipVal = rs.getLong ("IP");
+				String ipVal = rs.getString ("IP");
 				String portVal = rs.getString ("port");
 				String typeVal = rs.getString ("type");
 				Gateway newGateway;
